@@ -5,6 +5,9 @@
 #include <vector>
 #include <ctime>
 
+/**
+ * Class for building Concert Objects
+ */
 class Concert {
 	public:
 		Concert();

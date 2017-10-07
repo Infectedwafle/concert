@@ -1,3 +1,10 @@
+/**
+ * Concert Planner
+ *
+ * Keeps track of concerts and allows sorting them by date then desire
+ *
+ * By Kevin Anderson
+ */
 #include "Concert.h"
 #include <iostream>
 #include <algorithm>
@@ -72,5 +79,6 @@ int main() {
 	for(int i = 0; i < concerts.size(); i++) {
 		std::cout << concerts[i] << std::endl;
 	}
+
 	return 0;
 }
