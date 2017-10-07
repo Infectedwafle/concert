@@ -58,25 +58,41 @@ bool Concert::operator<(const Concert& c) const{
 	//std::cout << *this << std::endl;
 	//std::cout << c << std::endl;
 
-	bool lessThan = false;
-
 	if(this->date.tm_year < c.date.tm_year) {
-		lessThan = true;
+		return true;
+	} 
+
+	if(this->date.tm_year != c.date.tm_year) {
+		return false;
 	}
 
-	if(!lessThan && this->date.tm_mon < c.date.tm_mon) {
-		lessThan = true;
-	}
-	
-	if(!lessThan && this->date.tm_mday < c.date.tm_mday) {
-		lessThan = true;
+	if (this->date.tm_mon < c.date.tm_mon)
+	{
+		return true;
 	}
 
-	if(!lessThan && this->desire < c.desire) {
-		lessThan = true;
+	if (this->date.tm_mon != c.date.tm_mon)
+	{
+		return false;
 	}
-	
-	return lessThan;
+
+	if (this->date.tm_mday < c.date.tm_mday)
+	{
+		return true;
+	}
+
+	if (this->date.tm_mday < c.date.tm_mday)
+	{
+		return false;
+	}
+
+	if (this->desire > c.desire)
+	{
+		return true;
+	}
+
+
+	return false;
 }
 
 std::ostream& operator<< (std::ostream& os, const Concert& c) {
