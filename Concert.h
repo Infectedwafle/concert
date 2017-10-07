@@ -13,6 +13,9 @@ class Concert {
 		std::vector<std::string> friends;
 		int desire;
 		std::tm date;
+		
+		bool operator< (const Concert& c) const;
+		
 
 	private:
 		std::string getConcertName();
@@ -27,8 +30,8 @@ class Concert {
 		std::tm getDate();
 		void setDate(std::tm date);
 
-		int operator< (const Concert& c);
-		std::ostream operator<< (const Concert& c);
 };
+
+std::ostream& operator<< (std::ostream& os, const Concert& c);
 
 #endif /* CONCERT_H */
