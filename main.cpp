@@ -1,10 +1,9 @@
-/**
- * Concert Planner
- *
- * Keeps track of concerts and allows sorting them by date then desire
- *
- * By Kevin Anderson
- */
+/*****************************************************************
+Keeps track of concerts and allows sorting them by date then desire
+
+@author Kevin Anderson
+@version Fall 2017
+*****************************************************************/
 #include "Concert.h"
 #include <iostream>
 #include <algorithm>
